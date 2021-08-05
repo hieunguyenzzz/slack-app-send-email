@@ -24,7 +24,7 @@ const sendContactApi = async (req, jwt) => {
   console.log('text', text);
   const body = JSON.stringify({
     to: process.env.STRAPI_EMAIL_TO || "hieunguyenel@gmail.com",
-    subject: 'contact us',
+    subject: 'need some help from mobelaris',
     text
   })
   const headers = {
