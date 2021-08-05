@@ -19,12 +19,9 @@ const loginApi = async () => {
 }
 const sendContactApi = async (req, jwt) => {
   const { query = {} } = req
-  let text = '';
-  for (const property in query) {
-
-    text += `${property}: ${query[property]} ` + "\n";
-  }
-  console.log(text)
+  let text = req.body.text;
+  
+  console.log('text', text);
   const body = JSON.stringify({
     to: process.env.STRAPI_EMAIL_TO || "hieunguyenel@gmail.com",
     subject: 'contact us',
