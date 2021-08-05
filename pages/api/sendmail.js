@@ -52,7 +52,7 @@ export default async function contact(req, res) {
   // Exit the current user from "Preview Mode". This function accepts no args.
   // Redirect the user back to the index page.
 
-  res.status(200).text('The email was sent successfully!');
+  res.status(200).json('The email was sent successfully!');
   res.end()
 
   try {
